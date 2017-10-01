@@ -48,3 +48,18 @@ while i < 5:
     print('i is: {}'.format(i))
     i = i + 1
 
+#########################
+## Appending to a list ##
+#########################
+print('###### Appending to a list ########')
+
+x = [1,2,3,4]
+my_list = []
+for num in x:
+    my_list.append(num * 2)
+print(my_list)
+
+#same with list comprehension
+my_list = [num * 2 for num in x]
+print('using list comprehension: ', my_list)
+
