@@ -25,9 +25,29 @@ class Circle():
     def set_radius(self, new_r):
         self.radius = new_r
 
+    #SPECAIL METHODS
+        #__str__ - build in special method, to invoke it just print(obj)
+    def __str__(self):
+        return "The radius of your circle is " + str(self.radius)
+
+        #__len__ - build in special method - return the lengh of the class
+    def __len__(self):
+        return 365
+
+    def __del__(self):
+        print("the circle deleted")
+
 myc = Circle(3)
 myc.set_radius(99)
 print (myc.area())
+#invoking special method __str__:
+print(myc)
+#invoking special method __len__:
+print(len(myc))
+#invoking special method __del__: 
+del(myc) # delete the circle
+#print(myc) # will throw an error becuse myc has been deleted
+
 
 
 
