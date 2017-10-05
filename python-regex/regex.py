@@ -53,3 +53,25 @@ multi_re_find(test_patterns, test_phrase)
 # [x,y] 
 test_patterns = ['s[sd]+'] # + - find letter 's' followed with 1 or more number of s, OR followed by 1 or more number of d
 multi_re_find(test_patterns, test_phrase)
+
+
+
+# a way to remove chars from string
+test_phrase = 'This is a STRING!!! But it have Puncuation, how can we remove it'
+test_patterns = ['[^!?.]+'] # the ^ is a way to remove the symbols inside []
+multi_re_find(test_patterns, test_phrase)
+
+# find all sequences of lowercase letters
+test_patterns = ['[a-z]+'] 
+multi_re_find(test_patterns, test_phrase)
+
+# find all sequences of uppercase letters
+test_patterns = ['[A-Z]+'] 
+multi_re_find(test_patterns, test_phrase)
+
+
+test_phrase = 'This is a STRING!!! But it have 123123123, how can we remove it'
+# find all digits in a string
+test_patterns = [r'\d+'] 
+multi_re_find(test_patterns, test_phrase)
+
